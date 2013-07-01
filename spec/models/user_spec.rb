@@ -25,6 +25,7 @@ describe User do
 		it "should not allow access to admin" do
 			expect do
 				User.new(admin: "1")
+# Rspec test recommended change from .should to .to (deprecated behaviour in Rspec3) 
 			end.to raise_error(ActiveModel::MassAssignmentSecurity::Error)
 		end
 	end
